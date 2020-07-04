@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script src="{{ url_for('static', filename='chart.js') }}"></script>
+</head>
+<body>
+<h1>{{ dataset.location }}</h1>
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<script>
+  loadChartData('{{ dataset.location }}', '{{ label }}', {{ labels|tojson|safe }}, {{ raw_data|tojson|safe }})
+</script>
+
+</body>
+</html>
