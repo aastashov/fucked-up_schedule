@@ -1,7 +1,7 @@
 import os
 import pathlib
 
-BASE_PATH = os.path.dirname(pathlib.Path(__file__).parent.absolute())
+BASE_PATH = pathlib.Path(__file__).parent.absolute()
 
 DATA_URL = 'https://covid.ourworldindata.org/data/owid-covid-data.json'
 

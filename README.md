@@ -21,5 +21,8 @@ pipenv install
 make runserver
 
 # start parsing data
-make runimporter
+make importer
+
+# build docker image
+make build
 ```

@@ -3,3 +3,6 @@ runserver:
 
 importer:
 	export PYTHONPATH=. && python application/importer.py
+
+build_deps:
+	pipenv-setup sync
