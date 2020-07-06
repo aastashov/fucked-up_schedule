@@ -1,22 +1,31 @@
 from flask import Flask, render_template
 
-from application.storage import storage
 from application.settings import STATIC
+from application.storage import storage
 
 app = Flask(__name__, static_url_path=STATIC)
 
 
 @app.route('/')
 def hello_world():
-    dataset = storage.load_data()
+    storage_dataset = storage.load_data()
 
-    labels = [i['date'] for i in dataset['data']]
-    raw_data = [int(i['new_cases']) for i in dataset['data']]
+    labels = []
+    datasets = {}
+    for label, dataset in storage_dataset.items():
+        labels.append(label)
+        for name, data in dataset.items():
+            d = datasets.get(name) or None
+            if d is None:
+                d = data
+                d['data'] = [d['value']]
+                d['name'] = name
+            else:
+                d['data'].append(data['value'])
+            datasets[name] = d
 
-    context = {
-        'dataset': dataset,
-        'label': 'Новые случаи',
+    return render_template('index.html', **{
+        'country': 'Kyrgyzstan',
         'labels': labels,
-        'raw_data': raw_data,
-    }
-    return render_template('index.html', **context)
+        'dataset': list(datasets.values()),
+    })

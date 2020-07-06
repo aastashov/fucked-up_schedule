@@ -10,7 +10,7 @@
 <canvas id="myChart" width="400" height="400"></canvas>
 
 <script>
-  loadChartData('{{ dataset.location }}', '{{ label }}', {{ labels|tojson|safe }}, {{ raw_data|tojson|safe }})
+  loadChartData('{{ country }}', {{ labels|tojson|safe }}, {{ dataset|tojson|safe }})
 </script>
 
 </body>

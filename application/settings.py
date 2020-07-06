@@ -3,7 +3,10 @@ import pathlib
 
 BASE_PATH = pathlib.Path(__file__).parent.absolute()
 
-DATA_URL = 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+DATASET_URLS = {
+    'ecdc': 'https://opendata.ecdc.europa.eu/covid19/casedistribution/json',
+    'owid': 'https://covid.ourworldindata.org/data/owid-covid-data.json',
+}
 
 STATIC = os.path.join(BASE_PATH, 'static/')
 

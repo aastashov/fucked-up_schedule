@@ -49,6 +49,23 @@ class Storage:
         self._load_file()
 
     def write_data(self, data: 'Dict'):
+        """ Should receive
+        {
+            "2020-12-01": {
+                "new_cases": {
+                    "en": "New cases",
+                    "ru": "Новые случаи",
+                    "value": 32
+                },
+                "new_deaths": {
+                    # ...
+                }
+            },
+            "2020-12-02": [
+                # ...
+            ]
+        }
+        """
         self._json = data
         self._write_file()
 
