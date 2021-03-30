@@ -149,7 +149,7 @@ setup(
         "pickleshare==0.7.5",
         "prompt-toolkit==3.0.5; python_full_version >= '3.6.1'",
         "ptyprocess==0.6.0",
-        "pygments==2.6.1; python_version >= '3.5'",
+        "pygments==2.7.4; python_version >= '3.5'",
         "requests==2.24.0",
         "six==1.15.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
         "traitlets==4.3.3",
