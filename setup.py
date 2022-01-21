@@ -138,7 +138,7 @@ setup(
         "decorator==4.4.2",
         "flask==1.1.2",
         "idna==2.10; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
-        "ipython==7.16.1",
+        "ipython==7.16.3",
         "ipython-genutils==0.2.0",
         "itsdangerous==1.1.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
         "jedi==0.17.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
