@@ -132,7 +132,7 @@ setup(
     install_requires=[
         "appnope==0.1.0; sys_platform == 'darwin'",
         "backcall==0.2.0",
-        "certifi==2020.6.20",
+        "certifi==2022.12.7",
         "chardet==3.0.4",
         "click==7.1.2; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
         "decorator==4.4.2",
